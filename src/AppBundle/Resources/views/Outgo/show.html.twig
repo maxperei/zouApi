@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Outgo</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Name</th>
+                <td>{{ outgo.name }}</td>
+            </tr>
+            <tr>
+                <th>Amount</th>
+                <td>{{ outgo.amount }}</td>
+            </tr>
+            <tr>
+                <th>Addeddate</th>
+                <td>{% if outgo.addedDate %}{{ outgo.addedDate|date('Y-m-d H:i:s') }}{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Id</th>
+                <td>{{ outgo.id }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('get_outgos') }}">Back to the list</a>
+        </li>
+    </ul>
+{% endblock %}

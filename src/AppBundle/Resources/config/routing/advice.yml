@@ -1,0 +1,32 @@
+get_advice:
+    path:  /advices/{id}
+    defaults: { _controller: AppBundle:Advice:get, _format: ~ }
+    requirements:
+        _method: GET
+        id: "\d+"
+
+get_advices:
+    path:  /advices
+    defaults: { _controller: AppBundle:Advice:all, _format: ~ }
+    requirements:
+        _method: GET
+
+post_advice:
+    path:  /advices
+    defaults: { _controller: AppBundle:Advice:post, _format: ~ }
+    requirements:
+        _method: POST
+
+put_advice:
+    path:  /advices/{id}
+    defaults: { _controller: AppBundle:Advice:put, _format: ~ }
+    requirements:
+        _method: PUT
+        id: "\d+"
+
+delete_advice:
+    path:  /advices/{id}
+    defaults: { _controller: AppBundle:Advice:delete, _format: ~ }
+    requirements:
+        _method: DELETE
+        id: "\d+"

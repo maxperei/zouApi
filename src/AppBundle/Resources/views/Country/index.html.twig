@@ -1,0 +1,64 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Countries list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Language</th>
+                <th>Currency</th>
+                <th>Capitalcity</th>
+                <th>Jetlag</th>
+                <th>Bestperiod</th>
+                <th>Flightduration</th>
+                <th>Headstate</th>
+                <th>Surface</th>
+                <th>Inhabitantsname</th>
+                <th>Population</th>
+                <th>Density</th>
+                <th>Flagfile</th>
+                <th>Costliving</th>
+                <th>Adapter</th>
+                <th>Areacode</th>
+                <th>Description</th>
+                <th>Id</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for country in countries %}
+            <tr>
+                <td><a href="{{ path('get_country', { 'id': country.id }) }}">{{ country.name }}</a></td>
+                <td>{{ country.language }}</td>
+                <td>{{ country.currency }}</td>
+                <td>{{ country.capitalCity }}</td>
+                <td>{{ country.jetLag }}</td>
+                <td>{{ country.bestPeriod }}</td>
+                <td>{{ country.flightDuration }}</td>
+                <td>{{ country.headState }}</td>
+                <td>{{ country.surface }}</td>
+                <td>{{ country.inhabitantsName }}</td>
+                <td>{{ country.population }}</td>
+                <td>{{ country.density }}</td>
+                <td>{{ country.flagFile }}</td>
+                <td>{{ country.costLiving }}</td>
+                <td>{{ country.adapter }}</td>
+                <td>{{ country.areaCode }}</td>
+                <td>{{ country.description }}</td>
+                <td>{{ country.id }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('get_country', { 'id': country.id }) }}">show</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    
+{% endblock %}

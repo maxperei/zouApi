@@ -1,0 +1,32 @@
+get_transaction:
+    path:  /transactions/{id}
+    defaults: { _controller: AppBundle:Transaction:get, _format: ~ }
+    requirements:
+        _method: GET
+        id: "\d+"
+
+get_transactions:
+    path:  /transactions
+    defaults: { _controller: AppBundle:Transaction:all, _format: ~ }
+    requirements:
+        _method: GET
+
+post_transaction:
+    path:  /transactions
+    defaults: { _controller: AppBundle:Transaction:post, _format: ~ }
+    requirements:
+        _method: POST
+
+put_transaction:
+    path:  /transactions/{id}
+    defaults: { _controller: AppBundle:Transaction:put, _format: ~ }
+    requirements:
+        _method: PUT
+        id: "\d+"
+
+delete_transaction:
+    path:  /transactions/{id}
+    defaults: { _controller: AppBundle:Transaction:delete, _format: ~ }
+    requirements:
+        _method: DELETE
+        id: "\d+"

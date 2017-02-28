@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Travelogues list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Private</th>
+                <th>Id</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for travelogue in travelogues %}
+            <tr>
+                <td><a href="{{ path('get_travelogue', { 'id': travelogue.id }) }}">{{ travelogue.private }}</a></td>
+                <td>{{ travelogue.id }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('get_travelogue', { 'id': travelogue.id }) }}">show</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    
+{% endblock %}

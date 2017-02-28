@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Procedures list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Type</th>
+                <th>Name</th>
+                <th>Content</th>
+                <th>Medialocation</th>
+                <th>Id</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for procedure in procedures %}
+            <tr>
+                <td><a href="{{ path('get_procedure', { 'id': procedure.id }) }}">{{ procedure.type }}</a></td>
+                <td>{{ procedure.name }}</td>
+                <td>{{ procedure.content }}</td>
+                <td>{{ procedure.mediaLocation }}</td>
+                <td>{{ procedure.id }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('get_procedure', { 'id': procedure.id }) }}">show</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    
+{% endblock %}

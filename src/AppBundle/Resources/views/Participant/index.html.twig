@@ -1,0 +1,34 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Participants list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Adult</th>
+                <th>Id</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for participant in participants %}
+            <tr>
+                <td><a href="{{ path('get_participant', { 'id': participant.id }) }}">{{ participant.name }}</a></td>
+                <td>{% if participant.adult %}Yes{% else %}No{% endif %}</td>
+                <td>{{ participant.id }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('get_participant', { 'id': participant.id }) }}">show</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    
+{% endblock %}

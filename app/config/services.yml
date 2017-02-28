@@ -1,0 +1,9 @@
+# Learn more about services, parameters and containers at
+# http://symfony.com/doc/current/service_container.html
+parameters:
+#    parameter_name: value
+
+services:
+    fos_user_registration:
+        class: AppBundle\Form\Usertype
+        arguments: [%fos_user.model.user.class%]

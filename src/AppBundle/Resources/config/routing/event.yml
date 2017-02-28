@@ -1,0 +1,32 @@
+get_event:
+    path:  /events/{id}
+    defaults: { _controller: AppBundle:Event:get, _format: ~ }
+    requirements:
+        _method: GET
+        id: "\d+"
+
+get_events:
+    path:  /events
+    defaults: { _controller: AppBundle:Event:all, _format: ~ }
+    requirements:
+        _method: GET
+
+post_event:
+    path:  /events
+    defaults: { _controller: AppBundle:Event:post, _format: ~ }
+    requirements:
+        _method: POST
+
+put_event:
+    path:  /events/{id}
+    defaults: { _controller: AppBundle:Event:put, _format: ~ }
+    requirements:
+        _method: PUT
+        id: "\d+"
+
+delete_event:
+    path:  /events/{id}
+    defaults: { _controller: AppBundle:Event:delete, _format: ~ }
+    requirements:
+        _method: DELETE
+        id: "\d+"

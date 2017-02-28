@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Travelogue</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Private</th>
+                <td>{% if travelogue.private %}Yes{% else %}No{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Id</th>
+                <td>{{ travelogue.id }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('get_travelogues') }}">Back to the list</a>
+        </li>
+    </ul>
+{% endblock %}

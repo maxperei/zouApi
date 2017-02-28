@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Budget</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Totalamount</th>
+                <td>{{ budget.totalAmount }}</td>
+            </tr>
+            <tr>
+                <th>Id</th>
+                <td>{{ budget.id }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('get_budgets') }}">Back to the list</a>
+        </li>
+    </ul>
+{% endblock %}

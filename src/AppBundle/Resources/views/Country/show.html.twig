@@ -1,0 +1,88 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Country</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Name</th>
+                <td>{{ country.name }}</td>
+            </tr>
+            <tr>
+                <th>Language</th>
+                <td>{{ country.language }}</td>
+            </tr>
+            <tr>
+                <th>Currency</th>
+                <td>{{ country.currency }}</td>
+            </tr>
+            <tr>
+                <th>Capitalcity</th>
+                <td>{{ country.capitalCity }}</td>
+            </tr>
+            <tr>
+                <th>Jetlag</th>
+                <td>{{ country.jetLag }}</td>
+            </tr>
+            <tr>
+                <th>Bestperiod</th>
+                <td>{{ country.bestPeriod }}</td>
+            </tr>
+            <tr>
+                <th>Flightduration</th>
+                <td>{{ country.flightDuration }}</td>
+            </tr>
+            <tr>
+                <th>Headstate</th>
+                <td>{{ country.headState }}</td>
+            </tr>
+            <tr>
+                <th>Surface</th>
+                <td>{{ country.surface }}</td>
+            </tr>
+            <tr>
+                <th>Inhabitantsname</th>
+                <td>{{ country.inhabitantsName }}</td>
+            </tr>
+            <tr>
+                <th>Population</th>
+                <td>{{ country.population }}</td>
+            </tr>
+            <tr>
+                <th>Density</th>
+                <td>{{ country.density }}</td>
+            </tr>
+            <tr>
+                <th>Flagfile</th>
+                <td>{{ country.flagFile }}</td>
+            </tr>
+            <tr>
+                <th>Costliving</th>
+                <td>{{ country.costLiving }}</td>
+            </tr>
+            <tr>
+                <th>Adapter</th>
+                <td>{{ country.adapter }}</td>
+            </tr>
+            <tr>
+                <th>Areacode</th>
+                <td>{{ country.areaCode }}</td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>{{ country.description }}</td>
+            </tr>
+            <tr>
+                <th>Id</th>
+                <td>{{ country.id }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('get_countries') }}">Back to the list</a>
+        </li>
+    </ul>
+{% endblock %}

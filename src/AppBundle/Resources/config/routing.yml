@@ -1,0 +1,104 @@
+api_userpref:
+    type: rest
+    prefix: /
+    resource: "@AppBundle/Resources/config/routing/userpref.yml"
+
+api_user:
+    type: rest
+    prefix: /
+    resource: "@AppBundle/Resources/config/routing/user.yml"
+
+api_travelogue:
+    type: rest
+    prefix: /
+    resource: "@AppBundle/Resources/config/routing/travelogue.yml"
+
+api_transaction:
+    type: rest
+    prefix: /
+    resource: "@AppBundle/Resources/config/routing/transaction.yml"
+
+api_project:
+    type: rest
+    prefix: /
+    resource: "@AppBundle/Resources/config/routing/project.yml"
+
+api_procedure:
+    type: rest
+    prefix: /
+    resource: "@AppBundle/Resources/config/routing/procedure.yml"
+
+api_post:
+    type: rest
+    prefix: /
+    resource: "@AppBundle/Resources/config/routing/post.yml"
+
+api_participant:
+    type: rest
+    prefix: /
+    resource: "@AppBundle/Resources/config/routing/participant.yml"
+
+api_outgo_category:
+    type: rest
+    prefix: /
+    resource: "@AppBundle/Resources/config/routing/outgocategory.yml"
+
+api_outgo:
+    type: rest
+    prefix: /
+    resource: "@AppBundle/Resources/config/routing/outgo.yml"
+
+api_media_post:
+    type: rest
+    prefix: /
+    resource: "@AppBundle/Resources/config/routing/mediapost.yml"
+
+api_media_event:
+    type: rest
+    prefix: /
+    resource: "@AppBundle/Resources/config/routing/mediaevent.yml"
+
+api_luggage:
+    type: rest
+    prefix: /
+    resource: "@AppBundle/Resources/config/routing/luggage.yml"
+
+api_item_category:
+    type: rest
+    prefix: /
+    resource: "@AppBundle/Resources/config/routing/itemcategory.yml"
+
+api_item:
+    type: rest
+    prefix: /
+    resource: "@AppBundle/Resources/config/routing/item.yml"
+
+api_group:
+    type: rest
+    prefix: /
+    resource: "@AppBundle/Resources/config/routing/group.yml"
+
+api_event:
+    type: rest
+    prefix: /
+    resource: "@AppBundle/Resources/config/routing/event.yml"
+
+api_country:
+    type: rest
+    prefix: /
+    resource: "@AppBundle/Resources/config/routing/country.yml"
+
+api_citation:
+    type: rest
+    prefix: /
+    resource: "@AppBundle/Resources/config/routing/citation.yml"
+
+api_budget:
+    type: rest
+    prefix: /
+    resource: "@AppBundle/Resources/config/routing/budget.yml"
+
+api_advice:
+    type: rest
+    prefix: /
+    resource: "@AppBundle/Resources/config/routing/advice.yml"

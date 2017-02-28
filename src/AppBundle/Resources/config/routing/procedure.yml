@@ -1,0 +1,32 @@
+get_procedure:
+    path:  /procedures/{id}
+    defaults: { _controller: AppBundle:Procedure:get, _format: ~ }
+    requirements:
+        _method: GET
+        id: "\d+"
+
+get_procedures:
+    path:  /procedures
+    defaults: { _controller: AppBundle:Procedure:all, _format: ~ }
+    requirements:
+        _method: GET
+
+post_procedure:
+    path:  /procedures
+    defaults: { _controller: AppBundle:Procedure:post, _format: ~ }
+    requirements:
+        _method: POST
+
+put_procedure:
+    path:  /procedures/{id}
+    defaults: { _controller: AppBundle:Procedure:put, _format: ~ }
+    requirements:
+        _method: PUT
+        id: "\d+"
+
+delete_procedure:
+    path:  /procedures/{id}
+    defaults: { _controller: AppBundle:Procedure:delete, _format: ~ }
+    requirements:
+        _method: DELETE
+        id: "\d+"

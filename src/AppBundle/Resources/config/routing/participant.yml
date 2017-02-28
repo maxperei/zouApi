@@ -1,0 +1,32 @@
+get_participant:
+    path:  /participants/{id}
+    defaults: { _controller: AppBundle:Participant:get, _format: ~ }
+    requirements:
+        _method: GET
+        id: "\d+"
+
+get_participants:
+    path:  /participants
+    defaults: { _controller: AppBundle:Participant:all, _format: ~ }
+    requirements:
+        _method: GET
+
+post_participant:
+    path:  /participants
+    defaults: { _controller: AppBundle:Participant:post, _format: ~ }
+    requirements:
+        _method: POST
+
+put_participant:
+    path:  /participants/{id}
+    defaults: { _controller: AppBundle:Participant:put, _format: ~ }
+    requirements:
+        _method: PUT
+        id: "\d+"
+
+delete_participant:
+    path:  /participants/{id}
+    defaults: { _controller: AppBundle:Participant:delete, _format: ~ }
+    requirements:
+        _method: DELETE
+        id: "\d+"

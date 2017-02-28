@@ -1,0 +1,38 @@
+get_user:
+    path:  /users/{id}
+    defaults: { _controller: AppBundle:User:get, _format: ~ }
+    requirements:
+        _method: GET
+        id: "\d+"
+
+get_users:
+    path:  /users
+    defaults: { _controller: AppBundle:User:all, _format: ~ }
+    requirements:
+        _method: GET
+
+get_identity:
+    path:  /identity
+    defaults: { _controller: AppBundle:User:identity, _format: ~ }
+    requirements:
+        _method: GET
+
+register_user:
+    path:  /register
+    defaults: { _controller: AppBundle:User:post, _format: ~ }
+    requirements:
+        _method: POST
+
+put_user:
+    path:  /users/{id}
+    defaults: { _controller: AppBundle:User:put, _format: ~ }
+    requirements:
+        _method: PUT
+        id: "\d+"
+
+delete_user:
+    path:  /users/{id}
+    defaults: { _controller: AppBundle:User:delete, _format: ~ }
+    requirements:
+        _method: DELETE
+        id: "\d+"

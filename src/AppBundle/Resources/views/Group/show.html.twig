@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Group</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Name</th>
+                <td>{{ group.name }}</td>
+            </tr>
+            <tr>
+                <th>Id</th>
+                <td>{{ group.id }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('get_groups') }}">Back to the list</a>
+        </li>
+    </ul>
+{% endblock %}

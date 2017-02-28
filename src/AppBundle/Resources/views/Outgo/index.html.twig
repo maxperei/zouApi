@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Outgos list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Amount</th>
+                <th>Addeddate</th>
+                <th>Id</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for outgo in outgos %}
+            <tr>
+                <td><a href="{{ path('get_outgo', { 'id': outgo.id }) }}">{{ outgo.name }}</a></td>
+                <td>{{ outgo.amount }}</td>
+                <td>{% if outgo.addedDate %}{{ outgo.addedDate|date('Y-m-d H:i:s') }}{% endif %}</td>
+                <td>{{ outgo.id }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('get_outgo', { 'id': outgo.id }) }}">show</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    
+{% endblock %}

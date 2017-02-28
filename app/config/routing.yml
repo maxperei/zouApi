@@ -1,0 +1,114 @@
+# AppBundle
+app_user:
+    resource: "@AppBundle/Controller/UserController.php"
+    type:     annotation
+
+app_user_pref:
+    resource: "@AppBundle/Controller/UserPrefController.php"
+    type:     annotation
+
+app_user:
+    resource: "@AppBundle/Controller/UserController.php"
+    type:     annotation
+
+app_travelogue:
+    resource: "@AppBundle/Controller/TravelogueController.php"
+    type:     annotation
+
+app_transaction:
+    resource: "@AppBundle/Controller/TransactionController.php"
+    type:     annotation
+
+app_project:
+    resource: "@AppBundle/Controller/ProjectController.php"
+    type:     annotation
+
+app_procedure:
+    resource: "@AppBundle/Controller/ProcedureController.php"
+    type:     annotation
+
+app_post:
+    resource: "@AppBundle/Controller/PostController.php"
+    type:     annotation
+
+app_participant:
+    resource: "@AppBundle/Controller/ParticipantController.php"
+    type:     annotation
+
+app_outgo_category:
+    resource: "@AppBundle/Controller/OutgoCategoryController.php"
+    type:     annotation
+
+app_outgo:
+    resource: "@AppBundle/Controller/OutgoController.php"
+    type:     annotation
+
+app_media_post:
+    resource: "@AppBundle/Controller/MediaPostController.php"
+    type:     annotation
+
+app_media_event:
+    resource: "@AppBundle/Controller/MediaEventController.php"
+    type:     annotation
+
+app_luggage:
+    resource: "@AppBundle/Controller/LuggageController.php"
+    type:     annotation
+
+app_item_category:
+    resource: "@AppBundle/Controller/ItemCategoryController.php"
+    type:     annotation
+
+app_item:
+    resource: "@AppBundle/Controller/ItemController.php"
+    type:     annotation
+
+app_group:
+    resource: "@AppBundle/Controller/GroupController.php"
+    type:     annotation
+
+app_event:
+    resource: "@AppBundle/Controller/EventController.php"
+    type:     annotation
+
+app_country:
+    resource: "@AppBundle/Controller/CountryController.php"
+    type:     annotation
+
+app_citation:
+    resource: "@AppBundle/Controller/CitationController.php"
+    type:     annotation
+
+app_budget:
+    resource: "@AppBundle/Controller/BudgetController.php"
+    type:     annotation
+
+app_advice:
+    resource: "@AppBundle/Controller/AdviceController.php"
+    type:     annotation
+
+app_default:
+    resource: "@AppBundle/Controller/DefaultController.php"
+    type:     annotation
+
+#NelmioApiDocBundle
+NelmioApiDocBundle:
+  resource: "@NelmioApiDocBundle/Resources/config/routing.yml"
+  prefix:   /doc
+
+# FOSRestBundle
+ApiBundle:
+    type: rest
+    prefix: /
+    resource: "@AppBundle/Resources/config/routing.yml"
+
+# FOSUserBundle
+fos_user_security:
+    resource: "@FOSUserBundle/Resources/config/routing/security.xml"
+
+# FOSAuthServerBundle
+fos_oauth_server_token:
+    resource: "@FOSOAuthServerBundle/Resources/config/routing/token.xml"
+
+fos_oauth_server_authorize:
+    resource: "@FOSOAuthServerBundle/Resources/config/routing/authorize.xml"

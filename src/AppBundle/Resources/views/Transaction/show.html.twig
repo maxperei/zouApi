@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Transaction</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Amount</th>
+                <td>{{ transaction.amount }}</td>
+            </tr>
+            <tr>
+                <th>Transactiondate</th>
+                <td>{% if transaction.transactionDate %}{{ transaction.transactionDate|date('Y-m-d H:i:s') }}{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Free</th>
+                <td>{{ transaction.free }}</td>
+            </tr>
+            <tr>
+                <th>Id</th>
+                <td>{{ transaction.id }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('get_transactions') }}">Back to the list</a>
+        </li>
+    </ul>
+{% endblock %}

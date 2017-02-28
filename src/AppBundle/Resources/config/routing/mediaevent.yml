@@ -1,0 +1,32 @@
+get_mediaevent:
+    path:  /mediaevents/{id}
+    defaults: { _controller: AppBundle:MediaEvent:get, _format: ~ }
+    requirements:
+        _method: GET
+        id: "\d+"
+
+get_mediaevents:
+    path:  /mediaevents
+    defaults: { _controller: AppBundle:MediaEvent:all, _format: ~ }
+    requirements:
+        _method: GET
+
+post_mediaevent:
+    path:  /mediaevents
+    defaults: { _controller: AppBundle:MediaEvent:post, _format: ~ }
+    requirements:
+        _method: POST
+
+put_mediaevent:
+    path:  /mediaevents/{id}
+    defaults: { _controller: AppBundle:MediaEvent:put, _format: ~ }
+    requirements:
+        _method: PUT
+        id: "\d+"
+
+delete_mediaevent:
+    path:  /mediaevents/{id}
+    defaults: { _controller: AppBundle:MediaEvent:delete, _format: ~ }
+    requirements:
+        _method: DELETE
+        id: "\d+"

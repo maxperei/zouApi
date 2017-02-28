@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Mediapost</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Type</th>
+                <td>{{ mediaPost.type }}</td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>{{ mediaPost.description }}</td>
+            </tr>
+            <tr>
+                <th>Location</th>
+                <td>{{ mediaPost.location }}</td>
+            </tr>
+            <tr>
+                <th>Id</th>
+                <td>{{ mediaPost.id }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('get_mediaposts') }}">Back to the list</a>
+        </li>
+    </ul>
+{% endblock %}

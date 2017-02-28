@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Budgets list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Totalamount</th>
+                <th>Id</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for budget in budgets %}
+            <tr>
+                <td><a href="{{ path('get_budget', { 'id': budget.id }) }}">{{ budget.totalAmount }}</a></td>
+                <td>{{ budget.id }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('get_budget', { 'id': budget.id }) }}">show</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    
+{% endblock %}

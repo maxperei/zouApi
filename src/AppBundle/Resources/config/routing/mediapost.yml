@@ -1,0 +1,32 @@
+get_mediapost:
+    path:  /mediaposts/{id}
+    defaults: { _controller: AppBundle:MediaPost:get, _format: ~ }
+    requirements:
+        _method: GET
+        id: "\d+"
+
+get_mediaposts:
+    path:  /mediaposts
+    defaults: { _controller: AppBundle:MediaPost:all, _format: ~ }
+    requirements:
+        _method: GET
+
+post_mediapost:
+    path:  /mediaposts
+    defaults: { _controller: AppBundle:MediaPost:post, _format: ~ }
+    requirements:
+        _method: POST
+
+put_mediapost:
+    path:  /mediaposts/{id}
+    defaults: { _controller: AppBundle:MediaPost:put, _format: ~ }
+    requirements:
+        _method: PUT
+        id: "\d+"
+
+delete_mediapost:
+    path:  /mediaposts/{id}
+    defaults: { _controller: AppBundle:MediaPost:delete, _format: ~ }
+    requirements:
+        _method: DELETE
+        id: "\d+"

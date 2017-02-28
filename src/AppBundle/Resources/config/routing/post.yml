@@ -1,0 +1,32 @@
+get_post:
+    path:  /posts/{id}
+    defaults: { _controller: AppBundle:Post:get, _format: ~ }
+    requirements:
+        _method: GET
+        id: "\d+"
+
+get_posts:
+    path:  /posts
+    defaults: { _controller: AppBundle:Post:all, _format: ~ }
+    requirements:
+        _method: GET
+
+post_post:
+    path:  /posts
+    defaults: { _controller: AppBundle:Post:post, _format: ~ }
+    requirements:
+        _method: POST
+
+put_post:
+    path:  /posts/{id}
+    defaults: { _controller: AppBundle:Post:put, _format: ~ }
+    requirements:
+        _method: PUT
+        id: "\d+"
+
+delete_post:
+    path:  /posts/{id}
+    defaults: { _controller: AppBundle:Post:delete, _format: ~ }
+    requirements:
+        _method: DELETE
+        id: "\d+"

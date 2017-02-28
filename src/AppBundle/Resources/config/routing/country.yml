@@ -1,0 +1,45 @@
+get_country:
+    path:  /countries/{id}
+    defaults: { _controller: AppBundle:Country:get, _format: ~ }
+    requirements:
+        _method: GET
+        id: "\d+"
+
+get_countries:
+    path:  /countries
+    defaults: { _controller: AppBundle:Country:all, _format: ~ }
+    requirements:
+        _method: GET
+
+get_destination:
+    path:  /destinations/{id}
+    defaults: { _controller: AppBundle:Country:get, _format: ~ }
+    requirements:
+        _method: GET
+        id: "\d+"
+
+get_destinations:
+    path:  /destinations
+    defaults: { _controller: AppBundle:Country:all, _format: ~ }
+    requirements:
+        _method: GET
+
+post_country:
+    path:  /countries
+    defaults: { _controller: AppBundle:Country:post, _format: ~ }
+    requirements:
+        _method: POST
+
+put_country:
+    path:  /countries/{id}
+    defaults: { _controller: AppBundle:Country:put, _format: ~ }
+    requirements:
+        _method: PUT
+        id: "\d+"
+
+delete_country:
+    path:  /countries/{id}
+    defaults: { _controller: AppBundle:Country:delete, _format: ~ }
+    requirements:
+        _method: DELETE
+        id: "\d+"

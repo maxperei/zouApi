@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Userprefs list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Childrennumber</th>
+                <th>Relationship</th>
+                <th>Accomodationtype</th>
+                <th>Activitytype</th>
+                <th>Id</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for userPref in userPrefs %}
+            <tr>
+                <td><a href="{{ path('get_userpref', { 'id': userPref.id }) }}">{{ userPref.childrenNumber }}</a></td>
+                <td>{% if userPref.relationship %}Yes{% else %}No{% endif %}</td>
+                <td>{{ userPref.accomodationType }}</td>
+                <td>{{ userPref.activityType }}</td>
+                <td>{{ userPref.id }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('get_userpref', { 'id': userPref.id }) }}">show</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    
+{% endblock %}

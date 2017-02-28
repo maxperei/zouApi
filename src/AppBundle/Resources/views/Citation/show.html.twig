@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Citation</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Author</th>
+                <td>{{ citation.author }}</td>
+            </tr>
+            <tr>
+                <th>Content</th>
+                <td>{{ citation.content }}</td>
+            </tr>
+            <tr>
+                <th>Id</th>
+                <td>{{ citation.id }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('get_citations') }}">Back to the list</a>
+        </li>
+    </ul>
+{% endblock %}

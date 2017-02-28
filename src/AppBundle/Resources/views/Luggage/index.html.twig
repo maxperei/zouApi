@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Luggages list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for luggage in luggages %}
+            <tr>
+                <td><a href="{{ path('get_luggage', { 'id': luggage.id }) }}">{{ luggage.id }}</a></td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('get_luggage', { 'id': luggage.id }) }}">show</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    
+{% endblock %}

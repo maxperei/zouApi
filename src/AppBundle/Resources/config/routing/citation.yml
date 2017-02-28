@@ -1,0 +1,32 @@
+get_citation:
+    path:  /citations/{id}
+    defaults: { _controller: AppBundle:Citation:get, _format: ~ }
+    requirements:
+        _method: GET
+        id: "\d+"
+
+get_citations:
+    path:  /citations
+    defaults: { _controller: AppBundle:Citation:all, _format: ~ }
+    requirements:
+        _method: GET
+
+post_citation:
+    path:  /citations
+    defaults: { _controller: AppBundle:Citation:post, _format: ~ }
+    requirements:
+        _method: POST
+
+put_citation:
+    path:  /citations/{id}
+    defaults: { _controller: AppBundle:Citation:put, _format: ~ }
+    requirements:
+        _method: PUT
+        id: "\d+"
+
+delete_citation:
+    path:  /citations/{id}
+    defaults: { _controller: AppBundle:Citation:delete, _format: ~ }
+    requirements:
+        _method: DELETE
+        id: "\d+"

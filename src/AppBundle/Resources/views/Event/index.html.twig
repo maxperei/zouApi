@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Events list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Startdate</th>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Id</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for event in events %}
+            <tr>
+                <td><a href="{{ path('get_event', { 'id': event.id }) }}">{{ event.startDate }}</a></td>
+                <td>{{ event.name }}</td>
+                <td>{{ event.description }}</td>
+                <td>{{ event.id }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('get_event', { 'id': event.id }) }}">show</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    
+{% endblock %}

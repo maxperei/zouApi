@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Mediaevents list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Type</th>
+                <th>Medialocation</th>
+                <th>Id</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for mediaEvent in mediaEvents %}
+            <tr>
+                <td><a href="{{ path('get_mediaevent', { 'id': mediaEvent.id }) }}">{{ mediaEvent.title }}</a></td>
+                <td>{{ mediaEvent.type }}</td>
+                <td>{{ mediaEvent.mediaLocation }}</td>
+                <td>{{ mediaEvent.id }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('get_mediaevent', { 'id': mediaEvent.id }) }}">show</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    
+{% endblock %}

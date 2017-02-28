@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Advice</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Type</th>
+                <td>{{ advice.type }}</td>
+            </tr>
+            <tr>
+                <th>Name</th>
+                <td>{{ advice.name }}</td>
+            </tr>
+            <tr>
+                <th>Content</th>
+                <td>{{ advice.content }}</td>
+            </tr>
+            <tr>
+                <th>Medialocation</th>
+                <td>{{ advice.mediaLocation }}</td>
+            </tr>
+            <tr>
+                <th>Id</th>
+                <td>{{ advice.id }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('get_advices') }}">Back to the list</a>
+        </li>
+    </ul>
+{% endblock %}

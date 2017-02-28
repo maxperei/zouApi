@@ -1,0 +1,68 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Project</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Name</th>
+                <td>{{ project.name }}</td>
+            </tr>
+            <tr>
+                <th>Createddate</th>
+                <td>{% if project.createdDate %}{{ project.createdDate|date('Y-m-d') }}{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Destcountry</th>
+                <td>{{ project.destCountry }}</td>
+            </tr>
+            <tr>
+                <th>Departuredate</th>
+                <td>{% if project.departureDate %}{{ project.departureDate|date('Y-m-d') }}{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Returndate</th>
+                <td>{% if project.returnDate %}{{ project.returnDate|date('Y-m-d') }}{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Accommodationtype</th>
+                <td>{{ project.accommodationType }}</td>
+            </tr>
+            <tr>
+                <th>Hosttype</th>
+                <td>{{ project.hostType }}</td>
+            </tr>
+            <tr>
+                <th>Discoveryactivity</th>
+                <td>{{ project.discoveryActivity }}</td>
+            </tr>
+            <tr>
+                <th>Lazingactivity</th>
+                <td>{{ project.lazingActivity }}</td>
+            </tr>
+            <tr>
+                <th>Sportactivity</th>
+                <td>{{ project.sportActivity }}</td>
+            </tr>
+            <tr>
+                <th>Maximumbudget</th>
+                <td>{{ project.maximumBudget }}</td>
+            </tr>
+            <tr>
+                <th>Config</th>
+                <td>{{ project.config }}</td>
+            </tr>
+            <tr>
+                <th>Id</th>
+                <td>{{ project.id }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('get_projects') }}">Back to the list</a>
+        </li>
+    </ul>
+{% endblock %}

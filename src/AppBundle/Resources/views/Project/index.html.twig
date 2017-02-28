@@ -1,0 +1,54 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Projects list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Createddate</th>
+                <th>Destcountry</th>
+                <th>Departuredate</th>
+                <th>Returndate</th>
+                <th>Accommodationtype</th>
+                <th>Hosttype</th>
+                <th>Discoveryactivity</th>
+                <th>Lazingactivity</th>
+                <th>Sportactivity</th>
+                <th>Maximumbudget</th>
+                <th>Config</th>
+                <th>Id</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for project in projects %}
+            <tr>
+                <td><a href="{{ path('get_project', { 'id': project.id }) }}">{{ project.name }}</a></td>
+                <td>{% if project.createdDate %}{{ project.createdDate|date('Y-m-d') }}{% endif %}</td>
+                <td>{{ project.destCountry }}</td>
+                <td>{% if project.departureDate %}{{ project.departureDate|date('Y-m-d') }}{% endif %}</td>
+                <td>{% if project.returnDate %}{{ project.returnDate|date('Y-m-d') }}{% endif %}</td>
+                <td>{{ project.accommodationType }}</td>
+                <td>{{ project.hostType }}</td>
+                <td>{{ project.discoveryActivity }}</td>
+                <td>{{ project.lazingActivity }}</td>
+                <td>{{ project.sportActivity }}</td>
+                <td>{{ project.maximumBudget }}</td>
+                <td>{{ project.config }}</td>
+                <td>{{ project.id }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('get_project', { 'id': project.id }) }}">show</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    
+{% endblock %}

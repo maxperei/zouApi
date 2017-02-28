@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Userpref</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Childrennumber</th>
+                <td>{% if userPref.childrenNumber %}Yes{% else %}No{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Relationship</th>
+                <td>{% if userPref.relationship %}Yes{% else %}No{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Accomodationtype</th>
+                <td>{{ userPref.accomodationType }}</td>
+            </tr>
+            <tr>
+                <th>Activitytype</th>
+                <td>{{ userPref.activityType }}</td>
+            </tr>
+            <tr>
+                <th>Id</th>
+                <td>{{ userPref.id }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('get_userprefs') }}">Back to the list</a>
+        </li>
+    </ul>
+{% endblock %}

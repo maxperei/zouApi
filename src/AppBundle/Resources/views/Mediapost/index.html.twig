@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Mediaposts list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Type</th>
+                <th>Description</th>
+                <th>Location</th>
+                <th>Id</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for mediaPost in mediaPosts %}
+            <tr>
+                <td><a href="{{ path('get_mediapost', { 'id': mediaPost.id }) }}">{{ mediaPost.type }}</a></td>
+                <td>{{ mediaPost.description }}</td>
+                <td>{{ mediaPost.location }}</td>
+                <td>{{ mediaPost.id }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('get_mediapost', { 'id': mediaPost.id }) }}">show</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    
+{% endblock %}

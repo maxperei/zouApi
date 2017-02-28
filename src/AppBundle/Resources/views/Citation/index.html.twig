@@ -1,0 +1,34 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Citations list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Author</th>
+                <th>Content</th>
+                <th>Id</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for citation in citations %}
+            <tr>
+                <td><a href="{{ path('get_citation', { 'id': citation.id }) }}">{{ citation.author }}</a></td>
+                <td>{{ citation.content }}</td>
+                <td>{{ citation.id }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('get_citation', { 'id': citation.id }) }}">show</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    
+{% endblock %}

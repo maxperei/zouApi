@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Itemcategories list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Id</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for itemCategory in itemCategories %}
+            <tr>
+                <td><a href="{{ path('get_itemcategory', { 'id': itemCategory.id }) }}">{{ itemCategory.name }}</a></td>
+                <td>{{ itemCategory.id }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('get_itemcategory', { 'id': itemCategory.id }) }}">show</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    
+{% endblock %}
